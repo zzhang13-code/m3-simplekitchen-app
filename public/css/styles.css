@@ -1,0 +1,223 @@
+/* Nesting */
+/* SCSS */
+nav {
+  font-size: 1em;
+  font-font-weight: bold;
+  float: left;
+}
+nav ul {
+  list-style-type: none;
+}
+nav ul li {
+  float: left;
+  margin: 0 5px 0 0;
+  color: rgb(255, 255, 255);
+}
+nav ul li a {
+  text-decoration: none;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+nav ul li a {
+  color: rgb(255, 255, 255);
+}
+
+/* Variables */
+html {
+  font-size: 1em;
+  width: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, Sans-Serif;
+  background: rgb(218, 170, 14);
+}
+
+header {
+  height: 50px;
+  width: 1350px;
+  margin: 0.8em auto 1em auto;
+}
+
+main {
+  background: rgb(255, 255, 255);
+  width: 1350px;
+  min-height: 535px;
+  padding: 1.5%;
+  margin: 0 auto;
+}
+main #intro-image {
+  float: left;
+  width: 800px;
+}
+main #intro-image img {
+  width: 800px;
+}
+main #intro-text {
+  width: 550px;
+  height: 407px;
+  float: left;
+  background: rgb(212, 213, 216);
+  text-align: center;
+  padding-top: 8em;
+}
+main #intro-text h3 {
+  font-size: 2em;
+  color: rgb(49, 49, 48);
+}
+main #intro-text span {
+  font-family: "Sacramento", cursive;
+  font-size: 2em;
+}
+
+footer {
+  width: 1350px;
+  margin: 2em auto;
+  padding-left: 80px;
+  font-size: 0.85em;
+}
+
+button, .submit-buttton {
+  color: rgb(255, 255, 255);
+  width: 100px;
+  height: 40px;
+  background: rgb(218, 170, 14);
+  margin-top: 2em;
+}
+
+.submit-buttton {
+  border: 1px rgb(49, 49, 48);
+}
+
+.site-header, .home-page, .form-page, footer {
+  width: min(100% - 2rem, 1350px);
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+}
+
+.home-page {
+  display: flex;
+  gap: 1rem;
+  min-height: 0;
+  padding: 1rem;
+}
+
+.home-page #intro-text, .home-page #intro-image {
+  float: none;
+  width: 50%;
+  height: auto;
+}
+
+.home-page #intro-text {
+  padding: 3rem 1rem;
+}
+
+.home-page #intro-image img {
+  width: 100%;
+  height: auto;
+}
+
+.submit-button {
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  background: rgb(218, 170, 14);
+  color: rgb(49, 49, 48);
+}
+
+.form-page {
+  background: rgb(255, 255, 255);
+  min-height: 25rem;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.form-registration {
+  max-width: 25rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.form-registration input {
+  margin-bottom: 0.75rem;
+}
+
+.my-errors {
+  color: #9b1111;
+}
+
+.listing-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.listing-table th, .listing-table td {
+  border: 1px solid #777;
+  padding: 0.6rem;
+}
+
+@media (max-width: 700px) {
+  .home-page {
+    display: block;
+  }
+  .home-page #intro-text, .home-page #intro-image {
+    width: 100%;
+  }
+}
+.listing-reg h1 {
+  text-align: center;
+  margin: 0 0 2rem;
+}
+
+.form-registration {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-registration input {
+  width: 100%;
+  margin: 0 0 10px;
+}
+.form-registration .btn {
+  flex: 1 0 100%;
+}
+
+.my-errors {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  font-size: 1.2rem;
+  display: table;
+}
+.my-errors li {
+  margin: 0 0 1rem;
+}
+.my-errors li::before {
+  content: "! Error : ";
+  color: #f00;
+  font-weight: bold;
+}
+
+.listing-table th {
+  background: #000;
+  color: #fff;
+}
+.listing-table td:first-child, .listing-table th:first-child {
+  border-right: 1px solid #666;
+}
+
+.site-header nav ul {
+  display: flex;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+.site-header nav ul li {
+  float: none;
+  margin: 0;
+}

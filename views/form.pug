@@ -1,0 +1,15 @@
+extends layout
+block content
+  main.form-page
+    h1 Register for Simple Kitchen
+    - const values = data || {}
+    if errors && errors.length
+      ul.my-errors(role='alert')
+        each error in errors
+          li= error.msg
+    form.form-registration(action='/register' method='POST')
+      label(for='name') Name
+      input.form-control(type='text' id='name' name='name' value=values.name || '' required)
+      label(for='email') Email
+      input.form-control(type='email' id='email' name='email' value=values.email || '' required)
+      button.btn.btn-primary(type='submit') Submit

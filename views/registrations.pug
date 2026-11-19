@@ -1,0 +1,17 @@
+extends layout
+block content
+  main.form-page
+    h1 Registrations
+    if registrations.length
+      table.listing-table
+        thead
+          tr
+            th Name
+            th Email
+        tbody
+          each registration in registrations
+            tr
+              td= registration.name
+              td= registration.email
+    else
+      p No registrations yet.

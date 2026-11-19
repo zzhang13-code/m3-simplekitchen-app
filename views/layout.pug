@@ -1,0 +1,19 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    title= title || 'Simple Kitchen'
+    link(rel='preconnect' href='https://fonts.gstatic.com')
+    link(href='https://fonts.googleapis.com/css2?family=Sacramento&display=swap' rel='stylesheet')
+    link(rel='stylesheet' href='/css/bootstrap.min.css')
+    link(rel='stylesheet' href='/css/styles.css')
+  body
+    header.site-header
+      nav(aria-label='Main navigation')
+        ul
+          li: a(href='/') Home
+          li: a(href='/register') Register
+          li: a(href='/registrations') Registrations
+    block content
+    footer &copy; Simple Kitchen 2026
